@@ -42,13 +42,25 @@ function App() { //Parent Function
     e.preventDefault();
     const value = e.target.innerHTML;
     if (operation === "+"){
-      setDisp(parseInt(operand1) + parseInt(operand2))
+      setDisp(parseInt(operand1) + parseInt(operand2));
+      setOperand1(parseInt(operand1) + parseInt(operand2));
+      setOperand2(null);
+      setOperation(null);
     }else if (operation === "-"){
-      setDisp(parseInt(operand1) - parseInt(operand2))
-    }else if (operation === "x"){
-      setDisp(parseInt(operand1) * parseInt(operand2))
+      setDisp(parseInt(operand1) - parseInt(operand2));
+      setOperand1(parseInt(operand1) - parseInt(operand2));
+      setOperand2(null);
+      setOperation(null);
+    }else if (operation === "*"){
+      setDisp(parseInt(operand1) * parseInt(operand2));
+      setOperand1(parseInt(operand1) * parseInt(operand2));
+      setOperand2(null);
+      setOperation(null);
     }else if (operation === "÷"){
-      setDisp(parseInt(operand1) / parseInt(operand2))
+      setDisp(parseInt(operand1) / parseInt(operand2));
+      setOperand1(parseInt(operand1) / parseInt(operand2));
+      setOperand2(null);
+      setOperation(null);
     }
   }
 
@@ -104,7 +116,7 @@ function App() { //Parent Function
             <CalcButton buttonLabel = {4} onClick = {numButtonClickHandler}/>
             <CalcButton buttonLabel = {5} onClick = {numButtonClickHandler}/>
             <CalcButton buttonLabel = {6} onClick = {numButtonClickHandler}/>
-            <CalcButton buttonLabel = {"x"} onClick = {operationButtonClickHandler}/>
+            <CalcButton buttonLabel = {"*"} onClick = {operationButtonClickHandler}/>
             <CalcButton buttonLabel = {1} onClick = {numButtonClickHandler}/>
             <CalcButton buttonLabel = {2} onClick = {numButtonClickHandler}/>
             <CalcButton buttonLabel = {3} onClick = {numButtonClickHandler}/>
@@ -114,7 +126,7 @@ function App() { //Parent Function
             <CalcButton buttonLabel = {"="} onClick = {equalButtonClickHandler}/>
             <CalcButton buttonLabel = {"+"} onClick = {operationButtonClickHandler}/>
           </div>
-           <CalcButton buttonLabel = "Siegfrid M. Pineda" buttonClassName='nameButton' onClick = {nameButtonClickHandler}/>
+           <CalcButton buttonLabel = "Pineda" buttonClassName='nameButton' onClick = {nameButtonClickHandler}/>
         </div>
       </div>
     </div>
