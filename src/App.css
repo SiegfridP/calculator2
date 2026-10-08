@@ -7,6 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #add8e6;
 }
 
 .App {
@@ -36,7 +37,7 @@ body {
   height: 70px;
   background: #0f141c;
   color: white;
-  font-size: 2.5rem;
+  font-size: 23px;
   font-weight: 300;
   font-family: 'Courier New', Courier, monospace;
   padding: 10px 15px;
@@ -49,6 +50,7 @@ body {
   justify-content: flex-end;
   word-break: break-all;
   border: 1px solid #2a3546;
+  overflow: hidden;
 }
 
 .Keypad {
@@ -92,3 +94,7 @@ body {
   color: #ffffff;
 }
 
+.nameButton{
+  width: 295px;
+  margin-top: 15px;
+}
